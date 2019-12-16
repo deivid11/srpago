@@ -23,6 +23,9 @@
     "ext-mbstring": "*"
   },
   "autoload": {
-    "psr-4": { "SrPago\\" : "lib/" }
+    "psr-4": {
+      "SrPago\\" : "lib/",
+      "ApiSrPago\\": "."
+    }
   }
 }
