@@ -4,11 +4,11 @@
  * User: epalacio
  * Date: 10/8/2017
  * Time: 1:51 PM
+ * Edited by Deivid11
  */
 namespace ApiSrPago;
 
 include_once 'init.php';
-
 
 class SrPago
 {
