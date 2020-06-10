@@ -166,6 +166,14 @@ class SrPago
 
         return $sendOperationByEmail;
     }
+    
+        public function getTransactionData($token)
+    {
+        $chargeService = new \SrPago\Charges();
+
+        return $chargeService->retreive($token);
+
+    }
 
 }
 
