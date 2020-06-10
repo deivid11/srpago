@@ -153,17 +153,9 @@ class Charges extends Base {
             'latitude' => isset($parameters["latitude"]) ? '' . $parameters["latitude"] : "0.00000",
             'longitude' => isset($parameters["longitude"]) ? '' . $parameters["longitude"] : "0.00000",
         );
-        if(isset($parameters['user'])) {
-          $paymentRQ['affiliated'] = array(
-            'user' => isset($parameters["user"]) ? '' . $parameters["user"] : "",
-            'total_fee' => isset($parameters["total_fee"]) ? '' . $parameters["total_fee"] : "",
-        );
-        }
-            if(isset($parameters['affiliated'])) {
-                    $paymentRQ['affiliated'] = array(
-                   'user' => isset($parameters["affiliated"]) ? '' . $parameters["affiliated"] : "$",  //TODO esto no existía, recomiendo que se agregue
-                   'total_fee' => isset($parameters["total_fee"]) ? '' . $parameters["total_fee"] : ""
-            );
+        
+        if (isset($parameters['affiliated'])) {
+            $paymentRQ['affiliated'] = $parameters['affiliated'];
         }
 
         $connect = $this->mapToConnect($parameters);
