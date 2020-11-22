@@ -1,5 +1,5 @@
 {
-  "name": "sr-pago",
+  "name": "deivid11/sr-pago",
   "type": "symfony-bundle",
   "description": "SrPago Dev PHP Library",
   "keywords": [
